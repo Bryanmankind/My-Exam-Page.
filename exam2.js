@@ -18,7 +18,7 @@ const Options = [
 
 // LIST OF ANSWERS
 
-let Answers = ["D:36", "A:Buhari", "A:Osun", "D:6"];
+let Answers = ["D:36", " A:Buhari", " A:Osun", "D:6"];
 
 // Student Answers
 
@@ -82,13 +82,16 @@ const finish = function () {
   console.log(StudentAnw);
   console.log(Answers);
 
+  let correct = 0;
+
   for (let k = 0; k < Answers.length; k++) {
-    var correct = 0;
 
     if (Answers[k] == StudentAnw[k]) {
-      return correct++;
+      correct += 1;
     }
   }
+
+  console.log(` Your Score is ${correct} out of ${Answers.length}`);
 
   document.getElementById(
     "container"
